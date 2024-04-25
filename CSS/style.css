@@ -225,7 +225,7 @@ body {
 }
 @media (max-width: 767px) {
   .PlaceCard {
-    grid-template-columns: repeat(1, 50%);
+    grid-template-columns: repeat(1, 80%);
   }
   
 }
@@ -523,10 +523,10 @@ body {
   .ProductSection {
     grid-template-columns: repeat(1, 1fr);
   }
-  /* .ProductCard img {
-    width: 400px;
+  .ProductCard img {
+    width: 300px;
     height: 400px;
-  } */
+  }
   
 }
 @media (min-width: 768px) {
