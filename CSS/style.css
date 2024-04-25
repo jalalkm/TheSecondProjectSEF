@@ -225,7 +225,7 @@ body {
 }
 @media (max-width: 767px) {
   .PlaceCard {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(1, 50%);
   }
   
 }
