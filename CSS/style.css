@@ -523,10 +523,10 @@ body {
   .ProductSection {
     grid-template-columns: repeat(1, 1fr);
   }
-  .ProductCard img {
+  /* .ProductCard img {
     width: 400px;
     height: 400px;
-  }
+  } */
   
 }
 @media (min-width: 768px) {
