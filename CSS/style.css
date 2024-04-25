@@ -1,0 +1,548 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+  background-color: #C4E4FF;
+}
+.HeadBarContainer {
+  width: 80%;
+  height: 55px;
+  margin: auto;
+}
+.HeadBarContent {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position:fixed;
+  z-index: 1;
+  background-color: rgba(163, 216, 255, 0.9);
+}
+.HeadBarContent img {
+  width: 150px;
+  height: 55px;
+}
+.HeadBarContent ul li {
+  display: inline-block;
+}
+.HeadBarContent ul li, a {
+  /* color: #10439F; */
+  font-size: 14px;
+  font-weight: 600;
+  list-style: none;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+.HeadBarContent a {
+  color: #10439F;
+}
+.HeadBarServiceList i {
+  font-size: 20px;
+  
+}
+.UNDLIST {
+  position: relative;
+}
+.HeadBarSubList {
+  position: absolute;
+  width: 300px;
+  background-color: #A3D8FF;
+  border: 2px solid black;
+  padding: 10px;
+  margin-top: 15px;
+  transform: scale(0);
+  transition: 1s;
+  opacity: 0;
+  visibility: hidden;
+}
+.HeadBarSubList ul li {
+  display:block;
+}
+.UNDLIST:hover .HeadBarSubList {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+.HeadBarSubList {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  z-index: 1;
+}
+.HeadBarSubList  a {
+  border-bottom: 2px solid;
+}
+.HeadBarList .BordItem {
+  position: relative;
+}
+.HeadBarList .BordItem::before,
+.HeadBarList .BordItem::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  left: 0;
+  top:0; 
+  transition: transform 0.2s;
+}
+.HeadBarList .BordItem::before {
+  border-width: 0 2px;
+  height: 100%;  
+  width: 95%;
+  transform: scale3d(0,0,0);
+}
+.HeadBarList .BordItem:hover:before {
+  transform: scale3d(1,1,1);
+}
+.HeadBarList .BordItem::after {
+  border-width: 2px 0;
+  height: 91%;  
+  width: 98%;
+  transform: scale3d(0,1,1);
+}
+.HeadBarList .BordItem:hover:after {
+  transform: scale3d(1,1,1);
+  transition-delay: .2s;
+}
+/* //////////////////////////////////////////////////// */
+.HomeContainer {
+  width: 80%;
+  margin: 30px auto; 
+  position: relative;
+}
+
+.HomeContent {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../image/RED\ ROCKS\ OF\ TARTOUS\ \(Explored\).jpg);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  text-align: center;
+}
+.HomeInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.HomeInfo h2 {
+  font-size: 38px;
+  color: rgb(240, 226, 30);
+  
+}
+.HomeInfo button {
+  width: 150px;
+  height: 35px;
+  margin: 25px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  background-color: #FFBB70;
+  border-radius: 5px;
+  /* border: 0; */
+}
+.HomeInfo button:hover {
+  background-color: #DC6B19;
+  transition: 0.3s;
+}
+/* /////////////////////////// */
+.CategoryContainer {
+  width: 80%;
+  margin: auto;
+}
+.CategoryContent {
+  width: 100%;
+  padding: 25px 0;
+  /* margin: 0 auto; */
+}
+/* ////////// */
+.TitleAllSection {
+  text-align: center;
+  margin: 20px auto; 
+}
+.TitleAllSection h2 {
+  font-size: 42px;
+  text-transform: capitalize;
+}
+.TitleLineUnder {
+  width: 150px;
+  transform: translateX(0);
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  margin: 25px auto;
+}
+.TitleAllSection:hover .TitleLineUnder {
+  transform: scaleX(2);
+  transition: .5s;
+}
+/* ////////////////////////// */
+.PlaceCard {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-gap: 13px;
+}
+.Section1Card {
+  position: relative;
+}
+.Section1Card img {
+  width: 100%; 
+  height: 400px;
+}
+.Section1Card p {
+  margin-top: 25px;
+  font-size: 21px;
+  color: rgb(46, 46, 45);
+  text-transform: capitalize;
+}
+.Section1Card h2 {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.Section1Card .icon {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  background-color: rgb(194, 38, 38);
+  color: #fff;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5;
+}
+.Section1Card:hover .icon {
+  visibility: visible;
+  opacity: 1;
+}
+@media (max-width: 767px) {
+  .PlaceCard {
+    grid-template-columns: repeat(2, 50%);
+  }
+  
+}
+@media (min-width: 768px) {
+  .PlaceCard {
+    grid-template-columns: repeat(2, 50%);
+  }
+  
+}
+@media (min-width: 992px) {
+  .PlaceCard {
+    grid-template-columns: repeat(3, 30%);
+  }
+  
+}
+@media (min-width: 1200px) {
+  .PlaceCard {
+    grid-template-columns: repeat(4, 24%);
+  }
+  
+}
+/* ///////////////////////// */
+.DiscountContainer {
+  width: 100%;
+}
+.DiscountContent {
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+}
+.marketing {
+  position: relative;
+  width: 50%;
+  flex-grow: 2;
+  flex-shrink: 1;
+  padding: 25px;
+  background-color: bisque;
+  box-shadow: 1px 1px 5px 5px grey;
+}
+.marketing .scroll {
+  text-align: right;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+.marketing .scroll span {
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background-color: blue;
+  margin-left: 10px
+}
+
+.DiscountPalc {
+  width: 25%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  position: relative;
+}
+.img1 {
+  background-image: url(../image/Tartous\,\ Syria_\ I.jpg);
+  background-size: cover;
+  background-position: 50%;
+  transition: 0.4s;
+  margin: 0 15px;
+}
+.img2 {
+  background-image: url(../image/Syrian\ Breakfast.jpg);
+  background-size: cover;
+  transition: 0.4s;
+}
+.img1:hover {
+  transform: scale(1.1);
+}
+
+.img2:hover {
+  transform: scale(1.1);
+}
+.TopTitle {
+  padding: 25px;
+  position: relative;
+}
+.marketing .TopTitle .icon {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  font-size: 50px;
+  color: aqua;
+  margin-top: 25px;
+}
+.TopTitle h2 {
+  display: inline-block;
+  padding: 0 30px;
+}
+.TopTitle span {
+  display: block;
+  margin-left: 30px;
+  color: rgb(46, 46, 45);
+}
+.marketing .TopTitle + p {
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  
+}
+.DiscountInfo {
+  position: absolute;
+  top: 15px;
+  left: 22px;
+}
+.DiscountInfo h3 {
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 2.5px;
+  color: rgb(46, 46, 45);
+  margin-bottom: 10px;
+}
+.DiscountInfo h2 {
+  font-size: 24px;
+  color: rgb(18, 18, 80);
+  letter-spacing: 2.5px;
+}
+/* //////////// */
+@media (max-width: 992px) {
+  .DiscountContent {
+    flex-direction: column;
+  }
+  .marketing {
+    width: 100%;
+  }
+  .DiscountPalc {
+    width: 100%;
+    height: 400px;
+    margin: 15PX 0;
+  }
+}
+/* ///////////////////////////////////// */
+.ServicesContainer {
+  width: 80%;
+  margin: 75px auto;
+  padding: 25px;
+}
+.ServicesContent {
+  display: flex;
+}
+.ServicesItems {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  border-right: 2px solid rgb(46, 46, 45);
+  margin-bottom: 50px;
+
+}
+.ServicesItems:last-child {
+  border: 0;
+}
+.ServicesInfo {
+  margin-top: 25px;
+}
+.ServicesInfo h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.ServicesInfo p {
+  font-size: 14px;
+  padding: 4px;
+  color: rgb(46, 46, 45);
+}
+.ServicesIcons  {
+  background-image: url(../image/IconsAllPos.png);
+  background-repeat: no-repeat;
+  height: 55px;
+}
+.ServicesIconsHover1 {
+  background-position: center 5px;
+  transition: 1s;
+}
+.ServicesItems:hover .ServicesIconsHover1 {
+  background-image: url(../image/IconsAllPos.png);
+  background-position: center -50px;
+}
+.ServicesIconsHover2 {
+  background-position: center -100px;
+  transition: 1s;
+}
+.ServicesItems:hover .ServicesIconsHover2 {
+  background-image: url(../image/IconsAllPos.png);
+  background-position: center -148px;
+}
+
+.ServicesIconsHover3 {
+  background-position: center -200px;
+  transition: 1s;
+}
+.ServicesItems:hover .ServicesIconsHover3 {
+  background-image: url(../image/IconsAllPos.png);
+  background-position: center -246px;
+}
+.ServicesIconsHover4 {
+  background-position: center -298px;
+  transition: 1s;
+}
+.ServicesItems:hover .ServicesIconsHover4 {
+  background-image: url(../image/IconsAllPos.png);
+  background-position: center -348px;
+}
+.ServicesIconsHover5 {
+  background-position: center -395px;
+  transition: 1s;
+}
+.ServicesItems:hover .ServicesIconsHover5 {
+  background-image: url(../image/IconsAllPos.png);
+  background-position: center -450px;
+}
+@media (max-width: 768px) {
+  .ServicesContent {
+    flex-direction: column;
+  }
+  .ServicesItems {
+    border: 0;
+  }
+}
+/* ////////////////////// */
+.ProductContent {
+  width: 80%;
+  margin: auto;
+}
+.ProductName {
+  text-align: center;
+}
+.ProductName li {
+  list-style: none;
+  display: inline-block;
+  margin: 25px;
+  color: rgb(46, 46, 45);
+  font-size: 20px;
+}
+.ProductSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 29px;
+  margin: 40px 0;
+}
+.ProductCard img {
+  width: 340px;
+  height: 400px;
+}
+.ProductFront {
+  position: relative;
+}
+.ProductBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  opacity: 0.9;
+  transition: 0.5s;
+}
+.ProductBack .ProductIcons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ProductIcons li {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  background-color: #A3D8FF;
+  border-radius: 5px;
+}
+.ProductBack .ProductIcons li i {
+  color: rgba(9, 13, 223, 0.7);
+  font-size: 28px;
+}
+.ProductCard:hover .ProductBack {
+  transform: scaleX(1);
+}
+.ProductInfo .active {
+  color: yellow;
+}
+.ProductInfo i {
+  margin: 10px 0;
+  font-size: 14px;
+}
+.ProductInfo span {
+  display: block;
+  font-size: 16px;
+  color: rgb(46, 46, 45);
+  margin: 10px 0;
+}
+@media (max-width: 767px) {
+  .ProductSection {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .ProductCard img {
+    width: 400px;
+    height: 400px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .ProductSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+@media (min-width: 992px) {
+  .ProductSection {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .PlaceCard {
+    grid-template-columns: repeat(3, 24%);
+  }
+  
+}
