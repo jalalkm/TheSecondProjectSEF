@@ -541,8 +541,8 @@ body {
   }
 }
 @media (min-width: 1200px) {
-  .PlaceCard {
-    grid-template-columns: repeat(3, 24%);
+  .ProductSection {
+    grid-template-columns: repeat(3, 1fr);
   }
   
 }
